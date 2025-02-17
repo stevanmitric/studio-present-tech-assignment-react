@@ -34,14 +34,32 @@ header {
   flex-direction: column;
 }
 
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: absolute;
+    font-size: 3rem;
+    right: 20px;
+  }
+}
+
 .logo {
   position: absolute;
   top: -10px;
-  /* Adjust this to move the logo over the top section */
   left: 320px;
-  /* Adjust this to move the logo from the left edge */
   z-index: 5;
-  /* Make sure the logo stays on top */
+  width: 150px;
+
+  @media (max-width: 768px) {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100px;
+  }
 }
 
 .header-top {
@@ -60,15 +78,20 @@ header {
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px;
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    position: relative;
+  }
 }
 
-nav {
+.nav-menu {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-nav a {
+.nav-menu a {
   text-decoration: none;
   font-weight: 700;
   font-size: 16px;
@@ -92,6 +115,28 @@ nav a {
   /* Optional: padding for left alignment */
 }
 
+/* Download Button */
+.download-mobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    gap: 5px;
+    position: absolute;
+    right: 80px;
+  }
+}
+
+.download-desktop {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 /* Align p tag inside header-content to the left */
 .header-bottom p {
   text-align: left;
@@ -109,7 +154,37 @@ nav a {
 
 .slides {
   display: flex;
+  align-items: center;
   width: 100%;
+}
+
+.slides-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 5%;
+  border: none;
+  width: 629px;
+  height: 348px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.slides-content-text {
+  text-align: left;
+  width: 300px;
+}
+
+.slides-content-text h2 {
+  font-size: 38px;
+  padding-bottom: 5%;
+}
+
+.slides-content-text p {
+  font-size: 16px;
+  padding-bottom: 5%;
+  line-height: 24px;
 }
 
 .slides img {
@@ -179,6 +254,17 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.image-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+.image-group img {
+  width: 32%;
 }
 
 .content-left {
@@ -302,8 +388,9 @@ nav a {
 
 .image-row {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   padding-bottom: 20%;
+  gap: 10px;
 }
 
 .pepper {
@@ -684,3 +771,47 @@ footer {
 .footer-bottom p {
   margin: 0;
 }
+
+
+.pagination {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .dot.active {
+    background-color: #B50014;
+    border: 1px solid #FFFFFF;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+}
+
