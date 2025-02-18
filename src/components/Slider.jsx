@@ -32,11 +32,9 @@ const Slider = () => {
             </div>
           </div>
           <img src={Image} alt='Image 1' />
-          <img src={Image} alt='Image 2' />
-          <img src={Image} alt='Image 3' />
+          {/* <img src={Image} alt='Image 2' />
+          <img src={Image} alt='Image 3' /> */}
         </div>
-      </div>
-      <div>
         <div className='pagination'>
           <img src={arrowLeft} alt='' />
           {images.map((_, index) => (

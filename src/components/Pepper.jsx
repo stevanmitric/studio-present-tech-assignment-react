@@ -3,12 +3,12 @@ import PepperImage from '../assets/images/pepper.jpg';
 
 const Pepper = () => {
   return (
-    <section class='pepper'>
-      <div class='image-2'>
+    <section className='pepper'>
+      <div className='image-2'>
         <img src={PepperImage} alt='Dry-aged meat left' />
       </div>
-      <div class='content-right'>
-        <div class='text-right'>
+      <div className='content-right'>
+        <div className='text-right'>
           <h2>Custome spices for your meat</h2>
           <span>
             Turnbeutel nostrud exercitation ullamco Sprechen Sie deutsch

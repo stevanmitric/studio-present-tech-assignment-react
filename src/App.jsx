@@ -14,6 +14,7 @@ import Awards from './components/Awards';
 import Empfehlungs from './components/Empfehlungs';
 import TestimonialSlider from './components/TestimonialSlider';
 import Footer from './components/Footer';
+import Popup from './components/Popup';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -38,6 +39,7 @@ function App() {
         <TestimonialSlider />
       </main>
       <Footer />
+      <Popup />
     </>
   );
 }
